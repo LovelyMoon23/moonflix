@@ -1,0 +1,122 @@
+@import 'styles/common.css';
+@import 'styles/reset.css';
+@import 'styles/font.css';
+
+*{ 
+    color: white;
+    margin: 0 auto;
+}
+
+#wrap{
+    padding: 45px;
+}
+
+.user_menu{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-top: 8px;
+}
+.user_menu .logo{
+    font-family:'NetflixSansMedium';
+    font-size: 40px;
+    letter-spacing: -4px;
+    color: #e50914;
+}
+
+.user_menu button{
+    padding: 7px 17px ;
+    margin-right: 24px;
+    width: 106px;
+    height: 45px;
+    border: none;
+    background-color: #e50914;
+    font-family:'NetflixSansLight';
+    font-size: 16px;
+    color:#FFF;
+}
+
+.story_card_wrap{
+    padding: 180px 0;
+    text-align: center;
+}
+
+.introduction_wrap {
+    padding-bottom: 100px;
+    border-bottom: 8px solid #222;
+}
+
+.introduction_wrap .introduction_card_title{
+    margin-bottom: 20px;
+    font-family:'NetflixSansBold';
+    font-size: 50px;
+}
+
+.introduction_wrap .introduction_card_subtitle{
+    margin-bottom: 20px;
+    font-family:'NetflixSansThin';
+    font-size: 26px;
+}
+
+.introduction_wrap .introduction_card_content{
+    font-family:'NetflixSansThin';
+    font-size: 26px;
+}
+
+.introduction_wrap input {
+    padding: 0 15px 0;
+    margin: 30px 0;
+    width: 75%;
+    height: 60px;
+    border: none;
+    background-color: #fff;
+    font-family:'NetflixSansThin';
+    font-size: 19px;
+    color: #8c8c8c;
+}
+
+.go_to_main_button {
+    padding: 7px 17px;
+    width: 206px;
+    height: 45px;
+    border: none;
+    background-color: #e50914;
+    font-size: 16px;
+    color:#FFF;
+}
+
+.go_to_main_button span{
+    font-family:'NetflixSansLight';
+    background-color: #e50914;
+}
+
+.faq_wrap .faq_card_title{
+    margin: 60px 0;
+    font-family:'NetflixSansBold';
+    font-size: 50px;
+}
+
+.faq_wrap ul{
+    list-style: none;
+}
+
+.faq_question button{
+  width: 75%;
+  height: 60px;
+  margin: 14px;
+  padding-left: 14px;
+  border: none;
+  background: #303030;
+  font-family:'NetflixSansThin';
+  font-size: 26px;
+  text-align: left;
+}
+.faq_answer {
+    margin: 0 auto;
+    width: 75%;
+    padding: 30px;
+    background: #303030;
+    font-family:'NetflixSansThin';
+    font-size: 26px;
+    text-align: left;
+}

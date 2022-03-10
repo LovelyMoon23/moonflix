@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'NetflixSansBlack';
+    src: url('fonts/netflix-sans-cufonfonts/NetflixSansBlack.ttf')
+      format('truetype');
+  }
+  @font-face {
+    font-family: 'NetflixSansBold';
+    src: url('fonts/netflix-sans-cufonfonts/NetflixSansBold.ttf')
+      format('truetype');
+  }
+  @font-face {
+    font-family: 'NetflixSansIcon';
+    src: url('fonts/netflix-sans-cufonfonts/NetflixSansIcon.ttf')
+      format('truetype');
+  }
+  @font-face {
+    font-family: 'NetflixSansLight';
+    src: url('fonts/netflix-sans-cufonfonts/NetflixSansLight.ttf')
+      format('truetype');
+  }
+  @font-face {
+    font-family: 'NetflixSansMedium';
+    src: url('fonts/netflix-sans-cufonfonts/NetflixSansMedium.ttf')
+      format('truetype');
+  }
+  @font-face {
+    font-family: 'NetflixSansRegular';
+    src: url('fonts/netflix-sans-cufonfonts/NetflixSansRegular.ttf')
+      format('truetype');
+  }
+  @font-face {
+    font-family: 'NetflixSansThin';
+    src: url('fonts/netflix-sans-cufonfonts/NetflixSansThin.ttf')
+      format('truetype');
+  }

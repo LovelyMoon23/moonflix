@@ -1,0 +1,41 @@
+@import 'styles/common.css';
+@import 'styles/reset.css';
+@import 'styles/font.css';
+
+.home_wrap{
+    /* background-color: #303030; */
+}
+
+.movie_list_card_wrap{
+    display: inline-block;
+    padding: 5px;
+    width: 230px;
+}
+
+/* .card-header {
+    background-color: #303030;
+} */
+.card-body :hover{
+    border-radius: 20px;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.card-body p {
+    position: absolute;
+    transform: translate(20%, -10%);
+    background-color: transparent;
+    font-family: 'NetflixSansRegular';
+    color: #e50914;
+    font-size: 42px;
+}
+
+.card-footer {
+    font-family: 'NetflixSansRegular';
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #303030;
+
+}

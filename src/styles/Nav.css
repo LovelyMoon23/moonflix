@@ -1,0 +1,11 @@
+.nav_wrap{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.nav_logo {
+    font-family:'NetflixSansMedium';
+    font-size: 40px;
+    color: #e50914;
+}
