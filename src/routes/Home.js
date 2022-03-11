@@ -22,21 +22,21 @@ const Home = () => {
     <div className="home_wrap">
       {loading ? (
         <div className="loading_phrase">
-          페이지가 로딩중 입니다 . <AiOutlineLoading3Quarters />
+          Page Loading... <AiOutlineLoading3Quarters />
         </div>
       ) : (
         datas.map((data) => (
           <div className="movie_list_card_wrap">
             {data.rating > 7 && (
-              <div class="card-header">
-                <AiOutlineLike /> 평점 높음
+              <div className="card-header">
+                <AiOutlineLike /> 추천작
               </div>
             )}
-            <div class="card-body">
+            <div className="card-body">
               <p>M</p>
               <img src={data.medium_cover_image} />
             </div>
-            <div class="card-footer">{data.title}</div>
+            <div className="card-footer">{data.title}</div>
           </div>
         ))
       )}

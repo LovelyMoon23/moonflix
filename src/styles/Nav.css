@@ -1,7 +1,9 @@
 .nav_wrap{
     display: flex;
+    margin: 20px 45px;
     align-items:center;
     justify-content: space-between;
+    color: white;
 }
 
 .nav_logo {

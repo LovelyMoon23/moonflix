@@ -4,6 +4,7 @@ import {
   AiOutlineRight,
   AiFillCaretDown,
   AiOutlineCaretUp,
+  AiOutlineComment,
 } from 'react-icons/ai'
 import 'styles.css'
 
@@ -41,10 +42,12 @@ const Landing = () => {
   }
 
   return (
-    <div id="wrap">
+    <div id="wrap" className="landing_wrap">
       <div id="header" className="user_menu">
         <span className="logo">MOONFLIX</span>
-        <button>문의하기</button>
+        <div>
+          <button>문의하기</button>
+        </div>
       </div>
       <div id="content" className="story_card_wrap">
         <div className="introduction_wrap">
@@ -61,14 +64,19 @@ const Landing = () => {
             영화의 평점도 함께 확인해 볼 수 있습니다.
           </div>
           <input value="함께할 준비가 되셨나요?"></input>
-          <div>
-            <button className="go_to_main_button" onClick={goMain}>
-              <span>자세히 살펴보기</span>
+
+          <button className="go_to_main_button" onClick={goMain}>
+            <span>
+              자세히 보기
               <AiOutlineRight
-                style={{ paddingLeft: '3px', backgroundColor: 'transparent' }}
+                style={{
+                  backgroundColor: 'transparent',
+                  fontSize: '20px',
+                  margin: 0,
+                }}
               />
-            </button>
-          </div>
+            </span>
+          </button>
         </div>
 
         <div className="faq_wrap">
@@ -82,14 +90,12 @@ const Landing = () => {
                     {faqOpened ? (
                       <AiOutlineCaretUp
                         style={{
-                          paddingLeft: '3px',
                           backgroundColor: 'transparent',
                         }}
                       />
                     ) : (
                       <AiFillCaretDown
                         style={{
-                          paddingLeft: '3px',
                           backgroundColor: 'transparent',
                         }}
                       />

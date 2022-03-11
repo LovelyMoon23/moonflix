@@ -3,22 +3,32 @@
 @import 'styles/font.css';
 
 .home_wrap{
-    /* background-color: #303030; */
+   padding: 0 70px;
+   color: white;
+  text-align: center
+}
+
+.home_wrap .loading_phrase{
+    display:inline-block;
+text-align: center;
+font-family: 'NetflixSansRegular';
+color: #e50914;
+font-size: 80px;
+
 }
 
 .movie_list_card_wrap{
     display: inline-block;
-    padding: 5px;
-    width: 230px;
+    padding: 3px;
+
 }
 
-/* .card-header {
-    background-color: #303030;
-} */
+
 .card-body :hover{
     border-radius: 20px;
-    transform: scale(1.2);
+    transform: scale(1.2) translateY(-20px); ;
     transition-duration: 0.5s;
+ 
 }
 
 .card-body p {
@@ -31,11 +41,12 @@
 }
 
 .card-footer {
+    width: 100%;
     font-family: 'NetflixSansRegular';
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color: #303030;
+    background-color: #e50914;
 
 }

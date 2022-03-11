@@ -1,0 +1,25 @@
+@import 'styles/common.css';
+@import 'styles/reset.css';
+@import 'styles/font.css';
+
+#footer {
+    padding: 20px;
+    font-family: 'NetflixSansThin';
+    font-size: 18px;
+    color: #757575;
+}
+
+.footer_header  {
+    padding: 30px;
+    border-top: 8px solid #222;
+}
+.footer_header ul, .footer_contents ul{
+    list-style: none;
+    text-align: center;
+}
+
+.footer_contents li{
+    display: inline;
+    padding: 10px;
+    }
+

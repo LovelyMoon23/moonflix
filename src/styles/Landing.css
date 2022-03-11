@@ -2,13 +2,10 @@
 @import 'styles/reset.css';
 @import 'styles/font.css';
 
-*{ 
-    color: white;
-    margin: 0 auto;
-}
 
-#wrap{
+.landing_wrap{
     padding: 45px;
+    color: white;
 }
 
 .user_menu{
@@ -26,8 +23,6 @@
 
 .user_menu button{
     padding: 7px 17px ;
-    margin-right: 24px;
-    width: 106px;
     height: 45px;
     border: none;
     background-color: #e50914;
@@ -76,6 +71,7 @@
 }
 
 .go_to_main_button {
+    display: block;
     padding: 7px 17px;
     width: 206px;
     height: 45px;
@@ -85,7 +81,11 @@
     color:#FFF;
 }
 
+
 .go_to_main_button span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family:'NetflixSansLight';
     background-color: #e50914;
 }
@@ -107,6 +107,7 @@
   padding-left: 14px;
   border: none;
   background: #303030;
+  color: white;
   font-family:'NetflixSansThin';
   font-size: 26px;
   text-align: left;
