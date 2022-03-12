@@ -1,17 +1,31 @@
 import React from 'react'
 import 'styles.css'
-import { Outlet } from 'react-router-dom'
-// import { handle } from 'App.js'
-import { AiOutlineFullscreen } from 'react-icons/ai'
+import { AiOutlineFullscreen, AiOutlineFullscreenExit } from 'react-icons/ai'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 
-const Nav = ({ onClick }) => {
+const Nav = ({ onClick, fullscreenOn }) => {
+  const handle = useFullScreenHandle()
+
   return (
     <div className="nav_wrap">
       <div className="nav_logo">MOONFLIX</div>
-      <div>
-        <AiOutlineFullscreen onClick={onClick} style={{ fontSize: '36px' }} />
-      </div>
+      {fullscreenOn ? (
+        <div>
+          <AiOutlineFullscreenExit
+            onClick={onClick}
+            style={{ fontSize: '36px' }}
+          />
+        </div>
+      ) : (
+        <>
+          <div>
+            <AiOutlineFullscreen
+              onClick={onClick}
+              style={{ fontSize: '36px' }}
+            />
+          </div>
+        </>
+      )}
     </div>
   )
 }

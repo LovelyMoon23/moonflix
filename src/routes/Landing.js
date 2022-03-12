@@ -7,6 +7,7 @@ import {
   AiOutlineComment,
 } from 'react-icons/ai'
 import 'styles.css'
+import { configure } from '@testing-library/react'
 
 const Landing = () => {
   const [faqOpened, setFaqOpened] = useState(false)
@@ -22,24 +23,24 @@ const Landing = () => {
       question: 'MOONFLIX란 무엇인가요?',
       answer:
         '넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다. ',
+      boolean: false,
     },
     {
       key: '2',
       question: '데스크탑이 아닌 모바일, 테블릿도 지원하나요?',
       answer:
         '넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다. ',
+      boolean: false,
     },
     {
       key: '3',
       question: '전체화면으로 볼 수 있나요?',
       answer: '답입니다',
+      boolean: false,
     },
   ]
 
-  const openFaqCard = (event) => {
-    setFaqOpened(!faqOpened)
-    console.log(event.target.id)
-  }
+  const openFaqCard = (event) => {}
 
   return (
     <div id="wrap" className="landing_wrap">
