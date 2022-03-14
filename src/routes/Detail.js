@@ -44,12 +44,12 @@ const Detail = () => {
               alt="movie poster"
             />
             <button className="download_button">
-              <p>
+              <a href={detailData.torrents[0].url}>
                 Download
                 <AiOutlineDownload
                   style={{ backgroundColor: 'transparent', fontSize: '24px' }}
                 />
-              </p>
+              </a>
             </button>
           </div>
 

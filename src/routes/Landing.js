@@ -4,10 +4,8 @@ import {
   AiOutlineRight,
   AiFillCaretDown,
   AiOutlineCaretUp,
-  AiOutlineComment,
 } from 'react-icons/ai'
 import 'styles.css'
-import { configure } from '@testing-library/react'
 
 const Landing = () => {
   const [faqOpened, setFaqOpened] = useState(false)
