@@ -1,6 +1,10 @@
+.nav_wrap a{
+    text-decoration: none;
+}
+
 .nav_wrap{
     display: flex;
-    margin: 20px 45px;
+    padding: 53px 45px 45px;
     align-items:center;
     justify-content: space-between;
     color: white;
@@ -9,5 +13,6 @@
 .nav_logo {
     font-family:'NetflixSansMedium';
     font-size: 40px;
+    letter-spacing: -4px;
     color: #e50914;
 }

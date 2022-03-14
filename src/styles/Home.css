@@ -4,36 +4,43 @@
 
 .home_wrap{
    padding: 0 70px;
-   color: white;
-  text-align: center
+   text-align: center;
 }
 
 .home_wrap .loading_phrase{
-    display:inline-block;
-text-align: center;
-font-family: 'NetflixSansRegular';
-color: #e50914;
-font-size: 80px;
+    text-align: center;
+}
 
+.home_wrap .loading_phrase p {
+    display: inline-block;
+    font-family: 'NetflixSansRegular';
+    color: #e50914;
+    font-size: 80px;
 }
 
 .movie_list_card_wrap{
     display: inline-block;
     padding: 3px;
-
+    width:20%;
+    color: white;
+    cursor: pointer;
 }
 
 
-.card-body :hover{
+.card-body img:hover{
     border-radius: 20px;
     transform: scale(1.2) translateY(-20px); ;
     transition-duration: 0.5s;
- 
 }
+
+.card-body:hover p {
+    visibility: hidden;
+}
+
 
 .card-body p {
     position: absolute;
-    transform: translate(20%, -10%);
+    transform: translate(30%, -10%);
     background-color: transparent;
     font-family: 'NetflixSansRegular';
     color: #e50914;
@@ -41,12 +48,11 @@ font-size: 80px;
 }
 
 .card-footer {
-    width: 100%;
     font-family: 'NetflixSansRegular';
     text-align: center;
+    background-color: #e50914;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color: #e50914;
 
 }

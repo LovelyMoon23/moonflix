@@ -1,28 +1,42 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
+import { FullScreen, useFullScreenHandle } from 'react-full-screen'
+import { AiFillDownCircle, AiOutlineUpCircle } from 'react-icons/ai'
 import Nav from 'components/Nav'
 import Footer from 'components/Footer'
 import 'styles.css'
-import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 
 const Layout = () => {
-  const [fullscreenOn, setFullscrennOn] = useState(false)
+  const [fullscreenOn, setFullscreenOn] = useState(false)
   const handle = useFullScreenHandle()
 
-  const onClick = () => {
-    handle.enter()
-    setFullscrennOn(true)
+  const onFullScreenOn = async () => {
+    await handle.enter()
+    setFullscreenOn(true)
+  }
+
+  const onFullScreenOff = async () => {
+    await handle.exit()
+    setFullscreenOn(false)
+  }
+
+  const escExitFullScreen = () => {
+    setFullscreenOn(false)
   }
   return (
     <div id="wrap">
       <FullScreen handle={handle} className="fullscreen_style">
         <Nav
-          onClick={onClick}
+          onFullScreenOn={onFullScreenOn}
+          onFullScreenOff={onFullScreenOff}
+          escExitFullScreen={escExitFullScreen}
           fullscreenOn={fullscreenOn}
-          setFullscrennOn={setFullscrennOn}
         />
-        <Outlet />
+        <div className="contents_layout">
+          <Outlet />
+        </div>
       </FullScreen>
+
       <Footer />
     </div>
   )

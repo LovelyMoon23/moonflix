@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineLoading3Quarters, AiOutlineLike } from 'react-icons/ai'
+import { useParams, Link } from 'react-router-dom'
 import 'styles.css'
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
   const [datas, setDatas] = useState([])
+
   const getMovies = async () => {
     const movieList = await (
       await fetch(
@@ -20,16 +22,21 @@ const Home = () => {
 
   return (
     <div className="home_wrap">
-      {loading ? (
+      {loading && (
         <div className="loading_phrase">
-          Page Loading... <AiOutlineLoading3Quarters />
+          <p>
+            Your page is loading...
+            <AiOutlineLoading3Quarters />
+          </p>
         </div>
-      ) : (
-        datas.map((data) => (
+      )}
+      {datas.map((data) => (
+        <Link to={`/movie/${data.id}`}>
           <div className="movie_list_card_wrap">
             {data.rating > 7 && (
-              <div className="card-header">
-                <AiOutlineLike /> 추천작
+              <div className="card-header" key={data.id}>
+                <AiOutlineLike />
+                BEST
               </div>
             )}
             <div className="card-body">
@@ -38,8 +45,8 @@ const Home = () => {
             </div>
             <div className="card-footer">{data.title}</div>
           </div>
-        ))
-      )}
+        </Link>
+      ))}
     </div>
   )
 }

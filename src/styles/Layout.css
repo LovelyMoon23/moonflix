@@ -1,3 +1,8 @@
 .fullscreen_style{
     overflow:auto
 }
+
+.contents_layout{
+    padding: 0 70px;
+    text-align: center;
+}

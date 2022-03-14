@@ -1,18 +1,40 @@
 import React from 'react'
-import 'styles.css'
+import { Link } from 'react-router-dom'
 import { AiOutlineFullscreen, AiOutlineFullscreenExit } from 'react-icons/ai'
-import { FullScreen, useFullScreenHandle } from 'react-full-screen'
+import 'styles.css'
 
-const Nav = ({ onClick, fullscreenOn }) => {
-  const handle = useFullScreenHandle()
+const Nav = ({
+  onFullScreenOn,
+  onFullScreenOff,
+  fullscreenOn,
+  escExitFullScreen,
+}) => {
+  document.addEventListener('fullscreenchange', exitHandler)
+  document.addEventListener('webkitfullscreenchange', exitHandler)
+  document.addEventListener('mozfullscreenchange', exitHandler)
+  document.addEventListener('MSFullscreenChange', exitHandler)
+
+  function exitHandler() {
+    const escKeyPress =
+      !document.fullscreenElement &&
+      !document.webkitIsFullScreen &&
+      !document.mozFullScreen &&
+      !document.msFullscreenElement
+
+    if (escKeyPress) {
+      escExitFullScreen()
+    }
+  }
 
   return (
     <div className="nav_wrap">
-      <div className="nav_logo">MOONFLIX</div>
+      <Link to="/">
+        <div className="nav_logo">MOONFLIX</div>
+      </Link>
       {fullscreenOn ? (
         <div>
           <AiOutlineFullscreenExit
-            onClick={onClick}
+            onClick={onFullScreenOff}
             style={{ fontSize: '36px' }}
           />
         </div>
@@ -20,7 +42,7 @@ const Nav = ({ onClick, fullscreenOn }) => {
         <>
           <div>
             <AiOutlineFullscreen
-              onClick={onClick}
+              onClick={onFullScreenOn}
               style={{ fontSize: '36px' }}
             />
           </div>

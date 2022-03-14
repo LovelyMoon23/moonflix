@@ -17,7 +17,7 @@ const Footer = () => {
   ]
 
   const companyInfoList = companyInfo.map((data) => (
-    <li id={data.id}>{data.text}</li>
+    <li key={data.id}>{data.text}</li>
   ))
 
   return (

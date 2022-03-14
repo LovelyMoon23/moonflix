@@ -47,7 +47,9 @@ const Landing = () => {
       <div id="header" className="user_menu">
         <span className="logo">MOONFLIX</span>
         <div>
-          <button>문의하기</button>
+          <a href="mailto: help@moonflix.com" target="_blank">
+            <button>문의하기</button>
+          </a>
         </div>
       </div>
       <div id="content" className="story_card_wrap">

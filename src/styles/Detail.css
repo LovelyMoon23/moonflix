@@ -1,0 +1,58 @@
+@import 'styles/common.css';
+@import 'styles/reset.css';
+@import 'styles/font.css';
+
+.detail_wrap{
+    justify-content: center;
+    display: flex;
+    padding-bottom: 20px;
+    font-family: 'NetflixSansRegular';
+    color: #fff;
+}
+
+.detail_wrap .loading_phrase{
+    text-align: center;
+}
+
+.detail_wrap .loading_phrase p{
+    display: inline-block;
+    color: #e50914;
+    font-size: 80px;
+}
+
+.movie_image_wrap .download_button{
+    width:100%;
+    padding: 10px;
+    border: none;
+    background-color: #4b9924;
+    color: white;
+}
+
+.movie_image_wrap .download_button p{
+    display: inline-block;
+    padding-right: 4px;
+    background-color: transparent;
+    font-size: 24px;
+    text-align: center;
+}
+
+.movie_detail_contents{
+    width: 60%;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.movie_detail_header .title{
+    font-size: 42px;
+}
+
+
+.movie_detail_body ul{
+    list-style: none;
+}
+
+.movie_detail_body li{
+    font-size: 24px;
+}
+
+
