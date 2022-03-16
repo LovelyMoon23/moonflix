@@ -1,6 +1,6 @@
-.nav_wrap a{
-    text-decoration: none;
-}
+@import 'styles/common.css';
+@import 'styles/reset.css';
+@import 'styles/font.css';
 
 .nav_wrap{
     display: flex;

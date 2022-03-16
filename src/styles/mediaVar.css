@@ -1,0 +1,7 @@
+:root {
+    --lg: min-width: 1200px;
+    --pc: min-width: 992px;
+    --tab: min-width: 768px;
+    --mob:min-width: 600px;
+    --sm: max-width: 600px;
+}

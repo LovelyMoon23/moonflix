@@ -38,7 +38,12 @@ const Landing = () => {
     },
   ]
 
-  const openFaqCard = (event) => {}
+  const openFaqCard = (event) => {
+    // const { id, answer } = event.target.id
+    // if (id === answer) {
+    //   console.log('dd')
+    // }
+  }
 
   return (
     <div id="wrap" className="landing_wrap">
@@ -103,7 +108,7 @@ const Landing = () => {
                     )}
                   </button>
                 </li>
-                {faqOpened && <div className="faq_answer"> {faq.answer}</div>}
+                {faqOpened && <div className="faq_answer">{faq.answer}</div>}
               </>
             ))}
           </ul>

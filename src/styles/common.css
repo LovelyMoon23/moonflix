@@ -6,3 +6,11 @@
   font-family: 'NetFlixSans';
   background-color:#000;
 }
+
+a{
+  text-decoration: none;
+}
+
+ul{    
+  list-style: none;
+}

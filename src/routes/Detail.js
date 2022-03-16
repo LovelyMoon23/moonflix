@@ -22,10 +22,6 @@ const Detail = () => {
     getMovieDetail()
   }, [])
 
-  // const downloadAddr = detailData.torrrents.map((address) => (
-  //   <a src={address.url}></a>
-  // ))
-
   return (
     <div className="detail_wrap">
       {loading ? (
