@@ -7,6 +7,7 @@
     color: white;
 }
 
+
 @media only screen and (max-width: 600px) {
     .landing_wrap {
         padding: 1rem;
@@ -36,12 +37,29 @@
     color:#FFF;
 }
 
-@media only screen and (max-width: 600px) {
-    .user_menu button{
-        padding: 10px;
-        font-size: .9rem;
+.contact_icon{
+    display: none;
+}
+
+/* viewport 470px기준, 문의사항 버튼 사라지고 아이콘으로 대체 */
+@media only screen and (max-width: 470px) {
+    .user_menu button {
+        display: none;
+    }
+    .contact_icon{
+        display: block;
+        width:50px;
+        background-color: transparent;
     }
 }
+
+/* Galaxy Fold기준 문의사항 아이콘 사라지게 설정 */
+@media only screen and (max-width: 281px) {
+    .contact_icon{
+      display: none;
+    }
+}
+
 
 .story_card_wrap{
     padding: 180px 0;
@@ -50,9 +68,16 @@
 
 @media only screen and (max-width: 600px) {
     .story_card_wrap{
-        padding: 60px;
+        padding: 50px 20px;
     }
 }
+
+
+@media only screen and (max-width: 414px) {
+    .story_card_wrap {
+        padding: 50px 1px;
+    }
+  }    
 
 .introduction_wrap {
     padding-bottom: 100px;
@@ -66,12 +91,6 @@
     font-size: 3rem;
 }
 
-.introduction_wrap .introduction_card_subtitle{
-    margin-bottom: 20px;
-    font-family:'NetflixSansThin';
-    font-size: 1.5rem;
-}
-
 @media only screen and (min-width: 768px) {
     .introduction_wrap .introduction_card_title{
         font-size: 3rem; 
@@ -80,41 +99,92 @@
 
 @media only screen and (max-width: 767px) {
     .introduction_wrap .introduction_card_title {
-        font-size: 1.85rem; 
+        font-size: 1.75rem; 
     }
   }  
+
+.introduction_wrap .introduction_card_subtitle{
+    margin-bottom: 20px;
+    font-family:'NetflixSansThin';
+    font-size: 1.5rem;
+}
+
 
 .introduction_wrap .introduction_card_content{
     font-family:'NetflixSansThin';
     font-size: 1.5rem;
 }
 
+@media only screen and (max-width: 680px) {
+    .introduction_wrap .introduction_card_content{
+        font-size: 1.25rem;
+        padding: 0 10px;
+    }
+}  
+
+/* Galaxy Fold기준 콘텐츠 내용 잘리지않도록 설정 */
+@media only screen and (max-width: 767px) {
+    .introduction_wrap .introduction_card_title {
+        font-size: 1.6rem; 
+    }
+    .introduction_wrap .introduction_card_subtitle{
+        font-size: 1.25rem;
+    }
+    .introduction_wrap .introduction_card_content{
+        padding: 0 40px;
+        font-size: 1rem;
+    }
+}  
+  
+
+
 .introduction_wrap input {
     padding: 0 15px 0;
     margin: 30px 0;
-    width: 75%;
+    width: calc(100% - 300px);
     height: 60px;
+    border-radius: 8px 0 0 8px;
     border: none;
     background-color: #fff;
     font-family:'NetflixSansThin';
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #8c8c8c;
 }
 
 .go_to_main_button {
-    display: block;
-   width:25%;
+    display: inline-block;
+    width:300px;
+    margin: 30px 0;
     padding: 7px 17px;
-    height: 45px;
+    height: 61px;
+    border-radius: 0 8px 8px 0;
     border: none;
     background-color: #e50914;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color:#FFF;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
+    .introduction_wrap input {
+        border-radius: 8px;
+    }
     .go_to_main_button{
-        width:50%;
+      display: block;
+      margin:  0 auto;
+      width: 174px;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .introduction_wrap input{
+      
+        min-width: 100% ;
+        font-size: .9rem;
+    }
+    .go_to_main_button{
+        min-width: 50%;
         font-size: .9rem;
     }
 }
@@ -135,17 +205,22 @@
     font-size: 3rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px)  {
     .faq_wrap .faq_card_title{
         font-size: 2rem;
     }
   }
 
+  @media only screen and (max-width: 732px) {
+    .faq_wrap .faq_card_title{
+        font-size: 1.75rem;
+    }
+  }
 
 .faq_question button{
   width: 75%;
   height: 60px;
-  margin: 14px;
+  margin: 14px 0;
   padding-left: 14px;
   border: none;
   background: #303030;
@@ -154,6 +229,36 @@
   font-size: 1.5rem;
   text-align: left;
 }
+
+@media only screen and (max-width: 747px) {
+    .faq_question button{
+        margin: 5px 0 ;
+        padding: 0 20px ;
+        width:100%;
+        font-size: 1.25rem;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .faq_question button{
+        margin: 5px 0 ;
+        padding: 0 10px ;
+        width:100%;
+        font-size: 1.1rem;
+    }
+  }
+
+
+  @media only screen and (max-width: 392px) {
+    .faq_question button{
+        margin: 5px 0 ;
+        padding: 0px ;
+        width:100%;
+        font-size: 1rem;
+    }
+  }
+
+
 
 .faq_answer {
     margin: 0 auto;

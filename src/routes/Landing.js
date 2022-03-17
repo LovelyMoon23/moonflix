@@ -5,6 +5,7 @@ import {
   AiFillCaretDown,
   AiOutlineCaretUp,
 } from 'react-icons/ai'
+import contact from 'components/contact.png'
 import 'styles.css'
 
 const Landing = () => {
@@ -39,10 +40,8 @@ const Landing = () => {
   ]
 
   const openFaqCard = (event) => {
-    // const { id, answer } = event.target.id
-    // if (id === answer) {
-    //   console.log('dd')
-    // }
+    const id = event.target.id
+    setFaqOpened(!faqOpened)
   }
 
   return (
@@ -52,25 +51,21 @@ const Landing = () => {
         <div>
           <a href="mailto: help@moonflix.com" target="_blank">
             <button>문의하기</button>
+            <img className="contact_icon" src={contact}></img>
           </a>
         </div>
       </div>
       <div id="content" className="story_card_wrap">
         <div className="introduction_wrap">
-          <div className="introduction_card_title">
-            영화정보를 무제한으로 살펴보기.
-          </div>
+          <div className="introduction_card_title">영화정보를 무제한으로.</div>
           <div className="introduction_card_subtitle">
-            영화를 좋아하는 당신이라면
+            영화를 좋아하는 당신이라면,
           </div>
           <div className="introduction_card_content">
-            영화의 장르를 확인하고 줄거리를 확인할 수 있습니다.
+            다양한 영화의 평점을 확인하고 줄거리를 확인할 수 있습니다.
           </div>
-          <div className="introduction_card_content">
-            영화의 평점도 함께 확인해 볼 수 있습니다.
-          </div>
-          <input value="함께할 준비가 되셨나요?"></input>
 
+          <input value="함께할 준비가 되셨나요?"></input>
           <button className="go_to_main_button" onClick={goMain}>
             <span>
               자세히 보기
