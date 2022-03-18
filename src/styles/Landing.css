@@ -3,6 +3,8 @@
 @import 'styles/font.css';
 
 .landing_wrap{
+    max-width:1200px ;
+    margin: 0 auto;
     padding: 45px;
     color: white;
 }
@@ -140,8 +142,8 @@
 
 .introduction_wrap input {
     padding: 0 15px 0;
-    margin: 30px 0;
-    width: calc(100% - 300px);
+    margin: 30px 0px;
+    width: calc(80% - 280px);
     height: 60px;
     border-radius: 8px 0 0 8px;
     border: none;
@@ -153,7 +155,7 @@
 
 .go_to_main_button {
     display: inline-block;
-    width:300px;
+    width:280px;
     margin: 30px 0;
     padding: 7px 17px;
     height: 61px;

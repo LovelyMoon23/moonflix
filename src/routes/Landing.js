@@ -10,6 +10,7 @@ import 'styles.css'
 
 const Landing = () => {
   const [faqOpened, setFaqOpened] = useState(false)
+  const [clickedId, setClickedId] = useState([])
 
   const navigate = useNavigate()
   const goMain = () => {
@@ -41,6 +42,7 @@ const Landing = () => {
 
   const openFaqCard = (event) => {
     const id = event.target.id
+    setClickedId(id)
     setFaqOpened(!faqOpened)
   }
 
@@ -103,7 +105,9 @@ const Landing = () => {
                     )}
                   </button>
                 </li>
-                {faqOpened && <div className="faq_answer">{faq.answer}</div>}
+                {clickedId.length > 0 && faqOpened && (
+                  <div className="faq_answer">{faq.answer}</div>
+                )}
               </>
             ))}
           </ul>
