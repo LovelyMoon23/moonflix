@@ -71,13 +71,7 @@ const Landing = () => {
           <button className="go_to_main_button" onClick={goMain}>
             <span>
               자세히 보기
-              <AiOutlineRight
-                style={{
-                  backgroundColor: 'transparent',
-                  fontSize: '20px',
-                  margin: 0,
-                }}
-              />
+              <AiOutlineRight className="goto_main_arrow" />
             </span>
           </button>
         </div>
@@ -91,17 +85,9 @@ const Landing = () => {
                   <button onClick={openFaqCard} id={faq.key}>
                     {faq.question}
                     {faqOpened ? (
-                      <AiOutlineCaretUp
-                        style={{
-                          backgroundColor: 'transparent',
-                        }}
-                      />
+                      <AiOutlineCaretUp className="faq_arrow_mark" />
                     ) : (
-                      <AiFillCaretDown
-                        style={{
-                          backgroundColor: 'transparent',
-                        }}
-                      />
+                      <AiFillCaretDown className="faq_arrow_mark" />
                     )}
                   </button>
                 </li>

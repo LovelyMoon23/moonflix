@@ -40,6 +40,12 @@
     text-decoration: none;
 }
 
+.movie_download_button{
+    padding-left: 4px;
+    background-color: transparent;
+    font-size: 28px;
+}
+
 .movie_detail_contents{
     display:inline-block;
     width: 60%;
@@ -57,7 +63,7 @@
     }
     .movie_detail_contents{
        padding: 20px 0 0 ; 
-       /* margin: 0 auto; */
+       width: 90%;
     }
 }
 
@@ -76,3 +82,18 @@
     }
 }
 
+
+@media only screen and (max-width: 768px) {
+    .movie_image_wrap .download_button{
+        padding: 5px;
+    }
+    .movie_image_wrap .download_button a{
+        font-size: 1.25rem;
+    }
+    .movie_detail_header .title{
+        font-size: 1.75rem;
+    }
+    .movie_detail_body li{
+        font-size: 1.25rem;
+    }
+}

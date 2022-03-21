@@ -30,23 +30,19 @@ const Home = () => {
           </p>
         </div>
       )}
-      {datas.map((data) => (
-        <Link to={`/movie/${data.id}`}>
-          <div className="movie_list_card_wrap">
-            {data.rating > 7 && (
-              <div className="card-header" key={data.id}>
-                <AiOutlineLike />
-                BEST
+      <div className="thumbnail_wrap">
+        {datas.map((data) => (
+          <div className="movie_list_card_wrap" key={data.id}>
+            <Link to={`/movie/${data.id}`}>
+              <div className="card-body">
+                <p>M</p>
+                <img src={data.medium_cover_image} />
               </div>
-            )}
-            <div className="card-body">
-              <p>M</p>
-              <img src={data.medium_cover_image} />
-            </div>
-            <div className="card-footer">{data.title}</div>
+              <div className="card-footer">{data.title}</div>
+            </Link>
           </div>
-        </Link>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }

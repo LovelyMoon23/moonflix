@@ -12,7 +12,32 @@
 
 .nav_logo {
     font-family:'NetflixSansMedium';
-    font-size: 40px;
+    font-size: 2.5rem;
     letter-spacing: -4px;
     color: #e50914;
 }
+
+.goback_button{
+    margin-right: 12px;
+    font-size: 36px;
+}
+
+.fullscreen_icon{
+    font-size: 36px;
+}
+
+/* ipad mini기준까지는 전체화면이 보이게끔 설정, 모바일은 전체화면 기능 아이콘 없앰 */
+
+@media only screen and (max-width: 768px) {
+  .nav_wrap{
+    padding: 24px 32px;
+  }
+
+  .nav_logo {
+    font-size: 2rem;
+  }
+  .fullscreen_icon{
+      display: none;
+  }
+}
+

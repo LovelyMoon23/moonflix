@@ -35,16 +35,15 @@ const Detail = () => {
         <>
           <div className="movie_image_wrap">
             <img
+              className="movie_cover_imgage"
               src={detailData.medium_cover_image}
-              width="100%"
+              width="80%"
               alt="movie poster"
             />
             <button className="download_button">
               <a href={detailData.torrents[0].url}>
                 Download
-                <AiOutlineDownload
-                  style={{ backgroundColor: 'transparent', fontSize: '24px' }}
-                />
+                <AiOutlineDownload className="movie_download_button" />
               </a>
             </button>
           </div>

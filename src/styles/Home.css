@@ -3,7 +3,7 @@
 @import 'styles/font.css';
 
 .home_wrap{
-   padding: 0 70px;
+   padding: 0;
    text-align: center;
 }
 
@@ -15,21 +15,42 @@
     display: inline-block;
     font-family: 'NetflixSansRegular';
     color: #e50914;
-    font-size: 80px;
+    font-size: 5rem;
+}
+
+.thumbnail_wrap {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px ;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 430px) {
+    .thumbnail_wrap{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media only screen  and (max-width: 430px) {
+    .thumbnail_wrap{
+        grid-template-columns:  minmax(0, 1fr);
+        gap: 4px ;
+    }
 }
 
 .movie_list_card_wrap{
-    display: inline-block;
     padding: 3px;
-    width:20%;
-    color: white;
     cursor: pointer;
 }
 
+.card-body img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .card-body img:hover{
     border-radius: 20px;
-    transform: scale(1.2) translateY(-20px); ;
+    transform: scale(1.2) translateY(-20px); 
     transition-duration: 0.5s;
 }
 
@@ -44,12 +65,22 @@
     background-color: transparent;
     font-family: 'NetflixSansRegular';
     color: #e50914;
-    font-size: 42px;
+    font-size: 2.5rem;
 }
+
+@media only screen and (max-width: 430px) {
+    .card-body img{
+        width:80%;
+    }
+    .card-body p{
+        transform: translate(120%, -10%);
+    }
+} 
 
 .card-footer {
     font-family: 'NetflixSansRegular';
     text-align: center;
+    color: white;
     background-color: #e50914;
     white-space: nowrap;
     overflow: hidden;

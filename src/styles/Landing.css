@@ -105,6 +105,16 @@
     }
   }  
 
+.goto_main_arrow{
+    background-color: transparent;
+    font-size: 20px;
+    margin: 0;
+}  
+
+.faq_arrow_mark{
+    background-color: transparent;
+}
+
 .introduction_wrap .introduction_card_subtitle{
     margin-bottom: 20px;
     font-family:'NetflixSansThin';

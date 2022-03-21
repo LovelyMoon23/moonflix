@@ -10,3 +10,10 @@
     padding: 0 70px;
     text-align: center;
 }
+
+@media only screen and (max-width: 820px) {
+    .contents_layout{
+        padding: 10px;
+    }
+}
+

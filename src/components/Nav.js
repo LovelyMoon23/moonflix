@@ -42,19 +42,16 @@ const Nav = ({
         <div className="nav_logo">MOONFLIX</div>
       </Link>
       <div>
-        <AiOutlineArrowLeft
-          onClick={goBack}
-          style={{ fontSize: '36px', marginRight: '12px' }}
-        />
+        <AiOutlineArrowLeft className="goback_button" onClick={goBack} />
         {fullscreenOn ? (
           <AiOutlineFullscreenExit
+            className="fullscreen_icon"
             onClick={onFullScreenOff}
-            style={{ fontSize: '36px' }}
           />
         ) : (
           <AiOutlineFullscreen
+            className="fullscreen_icon"
             onClick={onFullScreenOn}
-            style={{ fontSize: '36px' }}
           />
         )}
       </div>
