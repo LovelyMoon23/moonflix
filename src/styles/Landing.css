@@ -3,15 +3,26 @@
 @import 'styles/font.css';
 
 .landing_wrap{
-    max-width:1200px ;
+    /* max-width:1200px ; */
     margin: 0 auto;
-    padding: 45px;
     color: white;
 }
 
+.main_wrap{
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/92bb3a0b-7e91-40a0-b27b-f2c3ac9ef6e4/180ca992-4d7b-4274-99be-cf8169176af2/KR-ko-20210322-popsignuptwoweeks-perspective_alpha_website_large.jpg') fixed;  
+}
+
+.main_wrap::before{
+content: '';
+background:linear-gradient(to right, black, transparent);
+position: absolute;
+left: 0;
+width: 50%;
+height: 100%;
+}
 
 @media only screen and (max-width: 600px) {
-    .landing_wrap {
+    .main_wrap, .faq_wrap{
         padding: 1rem;
     }
   }  
@@ -20,13 +31,14 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding-top: 8px;
+   padding: 53px 45px 45px;
 }
 .user_menu .logo{
     font-family:'NetflixSansMedium';
     font-size: 2.5rem;
     letter-spacing: -4px;
     color: #e50914;
+    z-index: 1;
 }
 
 .user_menu button{
@@ -37,6 +49,7 @@
     font-family:'NetflixSansLight';
     font-size: 1rem;
     color:#FFF;
+    cursor: pointer;
 }
 
 .contact_icon{
@@ -64,7 +77,7 @@
 
 
 .story_card_wrap{
-    padding: 180px 0;
+    padding: 140px 0 0;
     text-align: center;
 }
 
@@ -83,7 +96,9 @@
 
 .introduction_wrap {
     padding-bottom: 100px;
-    border-bottom: 8px solid #222;
+    position: relative;
+    z-index: 1;
+
 }
 
 
@@ -91,6 +106,7 @@
     margin-bottom: 20px;
     font-family:'NetflixSansBold';
     font-size: 3rem;
+  
 }
 
 @media only screen and (min-width: 768px) {
@@ -174,6 +190,7 @@
     background-color: #e50914;
     font-size: 1.5rem;
     color:#FFF;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 960px) {
@@ -211,8 +228,15 @@
     background-color: #e50914;
 }
 
+.faq_wrap {
+    position: relative;
+    padding-bottom: 140px;
+    background-color: black;
+    text-align: center;
+    z-index: 1;
+}
 .faq_wrap .faq_card_title{
-    margin: 60px 0;
+    padding: 60px 0;
     font-family:'NetflixSansBold';
     font-size: 3rem;
 }
