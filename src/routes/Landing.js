@@ -39,26 +39,9 @@ const Landing = () => {
   ]
 
   const openFaqCard = (event) => {
-    const emptyArr = [...clickedId]
     const id = event.target.id
-    const idArr = emptyArr.push(id)
-    // console.log('emptyArr', emptyArr)
-    // console.log('clickedId', clickedId)
-    setClickedId(emptyArr)
-
-    let index = clickedId.indexOf(id)
-    console.log(index, 'index')
-    const test = () => {
-      if (index !== -1) {
-        const result = clickedId.filter((number) => number !== id)
-        console.log('result', result)
-      }
-    }
-    test()
-
-    // const id = event.target.id
-    // setClickedId(id)
-    // setFaqOpened(!faqOpened)
+    setClickedId(id)
+    setFaqOpened(!faqOpened)
   }
 
   return (
@@ -103,7 +86,7 @@ const Landing = () => {
               <li className="faq_question">
                 <button onClick={openFaqCard} id={faq.key}>
                   {faq.question}
-                  {faqOpened ? (
+                  {faq.key === clickedId ? (
                     <AiOutlineCaretUp className="faq_arrow_mark" />
                   ) : (
                     <AiFillCaretDown className="faq_arrow_mark" />
@@ -111,7 +94,6 @@ const Landing = () => {
                 </button>
               </li>
               {faq.key === clickedId && (
-                // {clickedId.indexOf(faq.key) &&
                 <div className="faq_answer">{faq.answer}</div>
               )}
             </>

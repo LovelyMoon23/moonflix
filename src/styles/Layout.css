@@ -2,6 +2,10 @@
 @import 'styles/reset.css';
 @import 'styles/font.css';
 
+
+.layout_wrap{
+ background-color: black;
+}
 .fullscreen_style{
     overflow:auto
 }

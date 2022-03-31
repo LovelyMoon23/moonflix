@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { AiOutlineLoading3Quarters, AiOutlineLike } from 'react-icons/ai'
-import { useParams, Link } from 'react-router-dom'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import 'styles.css'
 
 const Home = () => {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
-import { AiFillDownCircle, AiOutlineUpCircle } from 'react-icons/ai'
 import Nav from 'components/Nav'
 import Footer from 'components/Footer'
 import 'styles.css'
@@ -24,7 +23,7 @@ const Layout = () => {
     setFullscreenOn(false)
   }
   return (
-    <div id="wrap">
+    <div id="wrap" className="layout_wrap">
       <FullScreen handle={handle} className="fullscreen_style">
         <Nav
           onFullScreenOn={onFullScreenOn}
