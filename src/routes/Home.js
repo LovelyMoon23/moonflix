@@ -1,3 +1,6 @@
+// 코드 작성자: 황문실
+// 파일 역할: 메인페이지의 역할로, 적어도 6점 이상의 평가를 받은 영화들 리스트를 사진과 함께 제공하는 페이지
+
 import React, { useEffect, useState } from 'react'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { Link } from 'react-router-dom'

@@ -1,3 +1,6 @@
+// 코드 작성자: 황문실
+// 파일 역할: route 역할
+
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Detail from 'routes/Detail'

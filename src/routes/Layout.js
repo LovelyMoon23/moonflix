@@ -1,3 +1,6 @@
+// 코드 작성자: 황문실
+// 파일 역할: Home, Detail 페이지의 레이아웃으로, '전체화면' 및 '이전으로 돌아가기'기능을 상단 nav에 추가한 페이지
+
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'

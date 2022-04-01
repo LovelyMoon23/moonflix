@@ -1,3 +1,6 @@
+// 코드 작성자: 황문실
+// 파일 역할: Home을 통해 클릭한 영화의 정보(시놉시스, 개봉날짜 등) 및 영화 다운로드 가능한 상세 페이지
+
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {

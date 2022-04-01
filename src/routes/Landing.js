@@ -1,3 +1,6 @@
+// 코드 작성자: 황문실
+// 파일 역할: landing페이지로 MOONFLIX의 간단한 소개 및 FAQ를 구현. 해당페이지는 전체화면을 굳이 제공하지 않도록 설계함
+
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
