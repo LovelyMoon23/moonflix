@@ -53,7 +53,7 @@ const Landing = () => {
         <div id="header" className="user_menu">
           <span className="logo">MOONFLIX</span>
           <div>
-            <a href="mailto: help@moonflix.com" target="_blank">
+            <a href="mailto:help@moonflix.com">
               <button>문의하기</button>
               <img className="contact_icon" src={contact}></img>
             </a>

@@ -21,7 +21,7 @@ const Home = () => {
     getMovies()
   }, [])
 
-  // async await를 통해 받아오는 영화 정보를 아직 받아오는 중일 때, 보여줄 화면
+  // getMovies를 통해 받아오는 영화 정보를 아직 받아오는 중일 때, 보여줄 화면
   if (loading) {
     return (
       <div className="home_wrap">

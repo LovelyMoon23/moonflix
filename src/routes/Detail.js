@@ -25,7 +25,7 @@ const Detail = () => {
     getMovieDetail()
   }, [])
 
-  // async await를 통해 받아오는 영화 정보를 아직 받아오는 중일 때, 보여줄 화면
+  // getMovieDetail를 통해 받아오는 영화 정보를 아직 받아오는 중일 때, 보여줄 화면
   if (loading) {
     return (
       <div className="detail_wrap">
