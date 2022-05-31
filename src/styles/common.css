@@ -6,6 +6,7 @@
   font-family: 'NetFlixSans';
 }
 
+/* 문자 쌍 사이에 줄바꿈 금지 */
 body{
   word-break: keep-all;
 }
