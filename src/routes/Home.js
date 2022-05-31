@@ -12,9 +12,7 @@ const Home = () => {
 
   const getMovies = async () => {
     const movieList = await (
-      await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=6&sort_by=year%27`
-      )
+      await fetch('https://yts.mx/api/v2/list_movies.json')
     ).json()
     setLoading(false)
     setDatas(movieList.data.movies)
@@ -23,16 +21,22 @@ const Home = () => {
     getMovies()
   }, [])
 
-  return (
-    <div className="home_wrap">
-      {loading && (
+  // async await를 통해 받아오는 영화 정보를 아직 받아오는 중일 때, 보여줄 화면
+  if (loading) {
+    return (
+      <div className="home_wrap">
         <div className="loading_phrase">
           <p>
             Your page is loading...
             <AiOutlineLoading3Quarters />
           </p>
         </div>
-      )}
+      </div>
+    )
+  }
+
+  return (
+    <div className="home_wrap">
       <div className="thumbnail_wrap">
         {datas.map((data) => (
           <div className="movie_list_card_wrap" key={data.id}>

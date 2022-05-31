@@ -25,51 +25,54 @@ const Detail = () => {
     getMovieDetail()
   }, [])
 
-  return (
-    <div className="detail_wrap">
-      {loading ? (
+  // async await를 통해 받아오는 영화 정보를 아직 받아오는 중일 때, 보여줄 화면
+  if (loading) {
+    return (
+      <div className="detail_wrap">
         <div className="loading_phrase">
           <p>
             Your page is loading...
             <AiOutlineLoading3Quarters />
           </p>
         </div>
-      ) : (
-        <>
-          <div className="movie_image_wrap">
-            <img
-              className="movie_cover_imgage"
-              src={detailData.medium_cover_image}
-              width="80%"
-              alt="movie poster"
-            />
-            <button className="download_button">
-              <a href={detailData.torrents[0].url}>
-                Download
-                <AiOutlineDownload className="movie_download_button" />
-              </a>
-            </button>
-          </div>
+      </div>
+    )
+  }
 
-          <div className="movie_detail_contents">
-            <div className="movie_detail_header">
-              <h1 className="title">{detailData.title}</h1>
-            </div>
-            <div className="movie_detail_body">
-              <ul>
-                <li>{detailData.year}</li>
-                <li>{detailData.genres}</li>
-                <li>
-                  <AiTwotoneLike /> {detailData.rating}
-                </li>
-                <br />
-                <li>{detailData.description_full}</li>
-              </ul>
-            </div>
-            <div className="movie_detail_footer"></div>
-          </div>
-        </>
-      )}
+  return (
+    <div className="detail_wrap">
+      <div className="movie_image_wrap">
+        <img
+          className="movie_cover_imgage"
+          src={detailData.medium_cover_image}
+          width="80%"
+          alt="movie poster"
+        />
+        <button className="download_button">
+          <a href={detailData.torrents[0].url}>
+            Download
+            <AiOutlineDownload className="movie_download_button" />
+          </a>
+        </button>
+      </div>
+
+      <div className="movie_detail_contents">
+        <div className="movie_detail_header">
+          <h1 className="title">{detailData.title}</h1>
+        </div>
+        <div className="movie_detail_body">
+          <ul>
+            <li>{detailData.year}</li>
+            <li>{detailData.genres}</li>
+            <li>
+              <AiTwotoneLike /> {detailData.rating}
+            </li>
+            <br />
+            <li>{detailData.description_full}</li>
+          </ul>
+        </div>
+        <div className="movie_detail_footer"></div>
+      </div>
     </div>
   )
 }

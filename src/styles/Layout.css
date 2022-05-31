@@ -3,7 +3,7 @@
 @import 'styles/font.css';
 
 
-.layout_wrap{
+#wrap{
  background-color: black;
 }
 .fullscreen_style{
