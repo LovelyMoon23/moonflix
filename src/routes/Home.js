@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import 'styles.css'
+import Categories from './Categories'
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
@@ -37,6 +38,7 @@ const Home = () => {
 
   return (
     <div className="home_wrap">
+      <Categories />
       <div className="thumbnail_wrap">
         {datas.map((data) => (
           <div className="movie_list_card_wrap" key={data.id}>
